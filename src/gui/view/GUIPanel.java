@@ -1,15 +1,16 @@
 package gui.view;
 
 import gui.controller.GUIController;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JTextField;
-import javax.swing.SpringLayout;
+import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
 
 /**
  * Creates the panel for the GUI project.
  * @author thod0127
- * @version 0.1 11/9/15 Bac constructor setup.
+ * @version 0.2 11/9/15 Added all of the objects and helper methods.
+ * Basic constructor setup.
  */
 public class GUIPanel extends JPanel
 {
@@ -40,13 +41,25 @@ public class GUIPanel extends JPanel
 		this.add(firstTextField);
 	}
 	
+	/**
+	 * Helper method to hold ugly GUI layout Code.
+	 */
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.WEST, firstButton, 155, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, firstTextField, 133, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, firstButton, -18, SpringLayout.NORTH, firstTextField);
+		baseLayout.putConstraint(SpringLayout.WEST, firstTextField, 141, SpringLayout.WEST, this);
 	}
 	
 	private void setupListeners()
 	{
-		
+		firstButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				JOptionPane.showMessageDialog(firstButton, "Yay!");
+			}
+		});
 	}
 }

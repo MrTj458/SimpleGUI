@@ -5,7 +5,7 @@ package gui.controller;
  * @author thod0127
  * @version 0.1 11/9/15
  */
-public class Runner
+public class GUIRunner
 {
 	/**
 	 * @param args Unused.

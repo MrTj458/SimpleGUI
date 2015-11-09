@@ -6,7 +6,8 @@ import gui.controller.GUIController;
 /**
  * Creates the frame for the GUI project
  * @author thod0127
- * @version 0.3 11/9/15 Added a reference to the GUIPanel and installed it as the content pane.
+ * @version 0.4 11/9/15 Added default close operation.
+ * Added a reference to the GUIPanel and installed it as the content pane.
  * Added the setupFrame helper method.
  */
 public class GUIFrame extends JFrame
@@ -26,6 +27,7 @@ public class GUIFrame extends JFrame
 		this.setContentPane(basePanel); //Sets the panel in the GUIFrame, this is required!
 		this.setResizable(false);		//Usually a good idea but not required
 		this.setSize(400,400);			//sets the size. Class default is 400,400.
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setVisible(true);			//Must be last line of code in setupFrame method.
 	}
 }

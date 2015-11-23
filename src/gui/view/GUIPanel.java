@@ -4,8 +4,8 @@ import gui.controller.GUIController;
 
 import javax.swing.*;
 
-import java.awt.Color;
 import java.awt.event.*;
+import java.awt.*;
 
 
 /**
@@ -87,6 +87,19 @@ public class GUIPanel extends JPanel
 			}
 			
 			public void mouseExited(MouseEvent exited)
+			{
+				changeRandomColor();
+			}
+		});
+		
+		this.addMouseMotionListener(new MouseMotionListener()
+		{
+			public void mouseMoved(MouseEvent moved)
+			{
+//				changeRandomColor();
+			}
+			
+			public void mouseDragged(MouseEvent dragged)
 			{
 				changeRandomColor();
 			}

@@ -1,7 +1,10 @@
 package gui.view;
 
 import gui.controller.GUIController;
+
 import javax.swing.*;
+
+import java.awt.Color;
 import java.awt.event.*;
 
 
@@ -88,5 +91,17 @@ public class GUIPanel extends JPanel
 				
 			}
 		});
+	}
+	
+	private void changeRandomColor()
+	{
+		int red, blue, green;
+		
+		red = (int) (Math.random() * 256);
+		blue = (int) (Math.random() * 256);
+		green = (int) (Math.random() * 256);
+		
+		this.setBackground(new Color(red, blue, green));
+		
 	}
 }

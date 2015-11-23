@@ -2,9 +2,8 @@ package gui.view;
 
 import gui.controller.GUIController;
 import javax.swing.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JOptionPane;
+import java.awt.event.*;
+
 
 /**
  * Creates the panel for the GUI project.
@@ -59,6 +58,34 @@ public class GUIPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				JOptionPane.showMessageDialog(firstButton, "Yay!");
+			}
+		});
+		
+		this.addMouseListener(new MouseListener()
+		{
+			public void mouseClicked(MouseEvent clicked)
+			{
+				
+			}
+			
+			public void mouseReleased(MouseEvent released)
+			{
+				
+			}
+			
+			public void mousePressed(MouseEvent pressed)
+			{
+				
+			}
+			
+			public void mouseEntered(MouseEvent entered)
+			{
+				
+			}
+			
+			public void mouseExited(MouseEvent exited)
+			{
+				
 			}
 		});
 	}
